@@ -1,0 +1,22 @@
+<header>
+	<div class="logo">
+		<a routerLink="">{{ this.global.siteName }}</a>
+	</div>
+	<nav>
+		<ul>
+			<li>
+				<a routerLink="">{{ "NAV.PRODUCTS" | translate }}</a>
+			</li>
+			<li>
+				<a routerLink="action">{{ "NAV.MAKE_PRODUCT" | translate }}</a>
+			</li>
+			<li>
+				<fa-icon [icon]="faGlobeAmericas"></fa-icon>
+				<a>{{ "CURRENT_LANG" | translate }}</a>
+				<div class="submenu">
+					<a *ngFor="let language of languages" (click)="changeLang(language)">{{ "LANGUAGES." + language | translate }}</a>
+				</div>
+			</li>
+		</ul>
+	</nav>
+</header>

@@ -1,0 +1,86 @@
+header
+	width: 100%
+	height: auto
+	padding: 0 10%
+	display: flex
+	flex-direction: row
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+
+	.logo
+		width: auto
+		display: flex
+		flex-direction: row
+		align-items: center
+
+		a 
+			color: #ff9800
+			font-size: 28px
+			font-weight: bold
+
+	nav
+		flex: 1
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: flex-end
+
+		ul
+			margin: 0
+			padding: 0
+			display: flex
+			flex-direction: row
+
+			> * + *
+				margin-left: 20px
+
+			li 
+				list-style: none
+				display: flex
+				flex-direction: row
+				align-items: center
+				position: relative
+				padding: 15px 0
+
+				> *
+					color: #ccc
+					cursor: pointer
+					transition: 0.3s
+
+				> * + *
+					margin-left: 5px
+
+				a
+					font-size: 15px
+
+				fa-icon
+					font-size: 20px
+
+				.submenu
+					background: #ff9800
+					position: absolute
+					right: -100%
+					top: 100%
+					display: flex
+					flex-direction: column
+					opacity: 0
+					visibility: hidden
+					transition: 0.5s
+					box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1)
+					z-index: 9999
+
+					> * + *
+						border-top: 1px solid white
+
+					a 
+						color: white
+						padding: 10px 20px
+						text-align: center
+
+				&:hover
+					> *
+						color: black
+
+					.submenu
+						right: 0
+						opacity: 1
+						visibility: visible

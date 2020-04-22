@@ -1,0 +1,67 @@
+{
+	"CURRENT_LANG": "ES",
+	"LANGUAGES": {
+		"ES": "Español",
+		"EN": "Ingles"
+	},
+
+	"NAV": {
+		"HOME": "Inicio",
+		"PRODUCTS": "Productos",
+		"MAKE_PRODUCT": "Crear Producto"
+	},
+
+	"SEARCH": {
+		"PLACEHOLDER": "Búsqueda...",
+		"SUBMIT": "Buscar"
+	},
+
+	"PRODUCT": {
+		"PRICE": "Desde"
+	},
+
+	"MONTHS": {
+		"1": "Enero",
+		"2": "Febrero",
+		"3": "Marzo",
+		"4": "Abril",
+		"5": "Mayo",
+		"6": "Junio",
+		"7": "Julio",
+		"8": "Agosto",
+		"9": "Septiembre",
+		"10": "Octubre",
+		"11": "Noviembre",
+		"12": "Diciembre"
+	},
+
+	"CREATE_PRODUCT": {
+		"TITLE": "Crear Producto",
+		"PLACEHOLDERS": {
+			"NAME": "Nombre del producto...",
+			"DESC": "Descripción del producto...",
+			"IMG": "URL de la imagen...",
+			"CATEGORY": "Selecciona la Categoría...",
+			"SIZE": "Size del producto...",
+			"COLOR": "Color del producto..",
+			"PRICE": "Precio del producto...",
+			"SAVE": "Guardar Producto"
+		},
+		"CATEGORIES": {
+			"CLOTHING": "Ropa",
+			"LAPTOPS": "Laptops"
+		},
+		"COLORS": {
+			"RED": "Rojo",
+			"BLUE": "Azul",
+			"GREEN": "Verde",
+			"YELLOW": "Amarillo"
+		}
+	},
+
+	"LATEST_PRODUCTS": "Ultimos (5) Productos",
+
+	"FOOTER": {
+		"COPYRIGHT": "Desarrollado por Carlos O. Castillo"
+	}
+}

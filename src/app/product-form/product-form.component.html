@@ -1,0 +1,60 @@
+<main>
+	<section>
+		<!-- Column -->
+		<div class="column">
+			<div class="box">
+				<!-- Title -->
+				<h1>{{ "CREATE_PRODUCT.TITLE" | translate }}</h1>
+
+				<!-- Content -->
+				<content>
+					<form>
+						<input type="text" name="product_name" placeholder="{{ 'CREATE_PRODUCT.PLACEHOLDERS.NAME' | translate }}">
+						<input type="text" name="product_desc" placeholder="{{ 'CREATE_PRODUCT.PLACEHOLDERS.DESC' | translate }}">
+						<input type="text" name="product_img" placeholder="{{ 'CREATE_PRODUCT.PLACEHOLDERS.IMG' | translate }}">
+						<select name="product_type" (change)="onChangeCategory($event.target.value)">
+							<option>{{ 'CREATE_PRODUCT.PLACEHOLDERS.CATEGORY' | translate }}</option>
+							<option *ngFor="let category of this.categories.getCategories(); let i = index" [value]="i">{{ "CREATE_PRODUCT.CATEGORIES." + category.name | translate }}</option>
+						</select>
+						<ng-container *ngFor="let category of this.categories.getCategories(); let c = index">
+							<div class="item-quality" *ngIf="category_selected == c">
+								<select name="product_size">
+									<option>{{ 'CREATE_PRODUCT.PLACEHOLDERS.SIZE' | translate }}</option>
+									<option *ngFor="let option of category.options.size; let i = index" [value]="i">{{ option }}</option>
+								</select>
+								<select name="product_color">
+									<option>{{ 'CREATE_PRODUCT.PLACEHOLDERS.COLOR' | translate }}</option>
+									<option *ngFor="let option of category.options.color; let i = index" [value]="i">{{ "CREATE_PRODUCT.COLORS." + option | translate }}</option>
+								</select>
+							</div>
+						</ng-container>
+						<input type="text" name="product_price" placeholder="{{ 'CREATE_PRODUCT.PLACEHOLDERS.PRICE' | translate }}">
+						<input type="submit" name="product_action" value="{{ 'CREATE_PRODUCT.PLACEHOLDERS.SAVE' | translate }}">
+					</form>
+				</content>
+			</div>
+		</div>
+
+		<!-- Column -->
+		<div class="column" small>
+			<div class="box">
+				<!-- Title -->
+				<h1>{{ "LATEST_PRODUCTS" | translate }}</h1>
+
+				<!-- Content -->
+				<content>
+					<div class="latest-products">
+						<div class="item" *ngFor="let product of latest_products">
+							<div class="image">
+								<img [src]="product.imageURL">
+							</div>
+							<div class="information">
+								<p>{{ product.name }}</p>
+							</div>
+						</div>
+					</div>
+				</content>
+			</div>
+		</div>
+	</section>
+</main>

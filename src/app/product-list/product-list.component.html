@@ -1,0 +1,44 @@
+<main>
+	<!-- Section -->
+	<section>
+		<!-- Search -->
+		<div class="search" test>
+			<fa-icon [icon]="faSearch"></fa-icon>
+			<form #searchForm="ngForm" (ngSubmit)="goSearch(searchForm)">
+				<input type="search" name="search_value" placeholder="{{ 'SEARCH.PLACEHOLDER' | translate }}" ngModel>
+				<input type="submit" name="search" value="{{ 'SEARCH.SUBMIT' | translate }}" ngModel="{{ 'SEARCH.SUBMIT' | translate }}">
+			</form>
+		</div>
+
+		<!-- Clear Search -->
+		<button *ngIf="search_loaded" class="clear-search" (click)="clearSearch()">Limpiar Búsqueda</button>
+	</section>
+
+	<!-- Products -->
+	<ngx-masonry [useImagesLoaded]="true" *ngIf="products?.length > 0; else itemsNotFound">
+		<!-- Items -->
+		<div ngxMasonryItem class="item" *ngFor="let product of products">
+			<div class="image">
+				<img [src]="product.imageURL" draggable="false">
+				<div class="actions">
+					<a class="edit"><fa-icon [icon]="faCog"></fa-icon></a>
+					<a class="delete" (click)="deleteProduct(product.id)"><fa-icon [icon]="faTimes"></fa-icon></a>
+				</div>
+			</div>
+			<content>
+				<h1>{{ product.name }}</h1>
+				<div class="row">
+					<p>{{ "PRODUCT.PRICE" | translate }} RD${{ product.price }}</p>
+					<p>{{ "MONTHS." + (product.createdAt | date: 'M') | translate }} {{ product.createdAt | date:'dd, yyyy' }}</p>
+				</div>
+			</content>
+		</div>
+	</ngx-masonry>
+
+	<ng-template #itemsNotFound>
+		<!-- Items not found -->
+		<div class="items-not-found">
+			<a>No se ha podido encontrar artículos...</a>
+		</div>
+	</ng-template>
+</main>

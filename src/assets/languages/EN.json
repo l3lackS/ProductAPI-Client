@@ -1,0 +1,67 @@
+{
+	"CURRENT_LANG": "EN",
+	"LANGUAGES": {
+		"ES": "Spanish",
+		"EN": "English"
+	},
+
+	"NAV": {
+		"HOME": "Home",
+		"PRODUCTS": "Products",
+		"MAKE_PRODUCT": "New Product"
+	},
+
+	"SEARCH": {
+		"PLACEHOLDER": "Search something...",
+		"SUBMIT": "Go"
+	},
+
+	"PRODUCT": {
+		"PRICE": "Only"
+	},
+
+	"MONTHS": {
+		"1": "January",
+		"2": "February",
+		"3": "March",
+		"4": "April",
+		"5": "May",
+		"6": "Jun",
+		"7": "July",
+		"8": "August",
+		"9": "September",
+		"10": "October",
+		"11": "November",
+		"12": "December"
+	},
+
+	"CREATE_PRODUCT": {
+		"TITLE": "Create Product",
+		"PLACEHOLDERS": {
+			"NAME": "Product name...",
+			"DESC": "Product description...",
+			"IMG": "Image URL...",
+			"CATEGORY": "Select a category...",
+			"SIZE": "Product size...",
+			"COLOR": "Product color...",
+			"PRICE": "Product price...",
+			"SAVE": "Save Product"
+		},
+		"CATEGORIES": {
+			"CLOTHING": "Clothing",
+			"LAPTOPS": "Laptops"
+		},
+		"COLORS": {
+			"RED": "Red",
+			"BLUE": "Blue",
+			"GREEN": "Green",
+			"YELLOW": "Yellow"
+		}
+	},
+
+	"LATEST_PRODUCTS": "Latest (5) Products",
+
+	"FOOTER": {
+		"COPYRIGHT": "Developed by Carlos O. Castillo"
+	}
+}

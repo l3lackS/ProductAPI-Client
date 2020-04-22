@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Globals } from '../../globals/globals';
+import { environment } from '../../../environments/environment';
 import { faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
    * Variables.
    */
   languages = [];
+  siteName = environment.siteName;
 
   /**
    * Icons.
@@ -23,8 +24,7 @@ export class HeaderComponent implements OnInit {
   /**
    * Constructor.
    */
-  constructor(public global: Globals,
-              public translate: TranslateService) { }
+  constructor(public translate: TranslateService) { }
 
   /**
    * ~ Function to change lang.

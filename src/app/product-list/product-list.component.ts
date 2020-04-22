@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faSearch, faCog, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FormBuilder, FormGroup, Validators, NgForm } from '@angular/forms';
 import { ProductsService } from '../services/products.service';
-import { Product } from '../interfaces/Product';
+import { Product } from '../interfaces/product';
 
 @Component({
   selector: 'app-product-list',

@@ -10,7 +10,7 @@
 				<content>
 					<form>
 						<input type="text" name="product_name" placeholder="{{ 'CREATE_PRODUCT.PLACEHOLDERS.NAME' | translate }}">
-						<input type="text" name="product_desc" placeholder="{{ 'CREATE_PRODUCT.PLACEHOLDERS.DESC' | translate }}">
+						<textarea name="product_desc" placeholder="{{ 'CREATE_PRODUCT.PLACEHOLDERS.DESC' | translate }}"></textarea>
 						<input type="text" name="product_img" placeholder="{{ 'CREATE_PRODUCT.PLACEHOLDERS.IMG' | translate }}">
 						<select name="product_type" (change)="onChangeCategory($event.target.value)">
 							<option>{{ 'CREATE_PRODUCT.PLACEHOLDERS.CATEGORY' | translate }}</option>
@@ -28,7 +28,7 @@
 								</select>
 							</div>
 						</ng-container>
-						<input type="text" name="product_price" placeholder="{{ 'CREATE_PRODUCT.PLACEHOLDERS.PRICE' | translate }}">
+						<input type="number" name="product_price" placeholder="{{ 'CREATE_PRODUCT.PLACEHOLDERS.PRICE' | translate }}">
 						<input type="submit" name="product_action" value="{{ 'CREATE_PRODUCT.PLACEHOLDERS.SAVE' | translate }}">
 					</form>
 				</content>

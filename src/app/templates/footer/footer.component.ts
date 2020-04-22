@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Globals } from '../../globals/globals';
+import { environment } from '../../../environments/environment';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -13,6 +13,7 @@ export class FooterComponent implements OnInit {
    * Variables.
    */
   today: number = Date.now();
+  siteName: string = environment.siteName;
 
   /**
    * Icons.
@@ -22,7 +23,7 @@ export class FooterComponent implements OnInit {
   /**
    * Constructor.
    */
-  constructor(public global: Globals) { }
+  constructor() { }
 
   ngOnInit() {
   }

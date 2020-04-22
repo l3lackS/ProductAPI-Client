@@ -10,8 +10,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { NgxMasonryModule } from 'ngx-masonry';
 
-import { Globals } from './globals/globals';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './templates/header/header.component';
@@ -48,7 +46,7 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     NgxMasonryModule
   ],
-  providers: [Globals, {
+  providers: [{
     provide: APOLLO_OPTIONS,
     useFactory: (httpLink: HttpLink) => {
       return {

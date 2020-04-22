@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Globals } from '../globals/globals';
+import { environment } from '../../environments/environment';
 import { Product } from '../interfaces/product';
 import { Apollo, QueryRef } from 'apollo-angular';
 import gql from 'graphql-tag';
@@ -13,7 +13,6 @@ export class ProductsService {
 
   constructor(
   	private http: HttpClient,
-  	private global: Globals,
     private apollo: Apollo
   ) { }
 
@@ -75,6 +74,6 @@ export class ProductsService {
   }
 
   getLatestProducts(): Observable<any> {
-    return this.http.get<Product[]>(this.global.BASE_URL + "/graphql?query={getLatestProducts{id, name, imageURL, price}}");
+    return this.http.get<Product[]>(environment.apiURL + "/graphql?query={getLatestProducts{id, name, imageURL, price}}");
   }
 }

@@ -46,7 +46,7 @@ main
 						> * + *
 							margin-top: 10px
 
-						input, select
+						input, select, textarea
 							background: #f1f1f1
 							width: 100%
 							padding: 10px
@@ -54,6 +54,13 @@ main
 							outline: none
 							color: #828282
 							border-left: 2px solid #818181
+
+							&::placeholder
+								color: #b5b5b5
+
+						textarea
+							resize: vertical
+							min-height: 150px
 
 						input[type="submit"]
 							background: #2ba530
